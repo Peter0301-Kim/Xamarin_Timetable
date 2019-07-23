@@ -1,6 +1,4 @@
 # Xamarin_Timetable
-First commit and push
-
 
 
 | Xamarin_Timetable Android | Xamarin_Timetable iOS | 
