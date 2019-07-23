@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoomNaviMobile.View.LecturerTimetableView"
+             Title="Lecturer Timetable"
+             >
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="TimetableListStyle" 
+               TargetType="{x:Type ListView}">
+                <Setter Property="RowHeight"
+                        Value="80" />
+                <Setter Property="VerticalOptions"
+                        Value="Center" />
+                <Setter Property="Margin"
+                        Value="0" />
+                <Setter Property="BackgroundColor"
+                        Value="AliceBlue" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name" HorizontalOptions="Start" VerticalOptions="Center" />
+                <Editor x:Name="txtLecturerName" Text="{Binding lecturerName}" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnGetLecturerTimetable" Text ="Search" Command="{Binding GetLecturerTimetableCommand}"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Grid RowSpacing="2" ColumnSpacing="2" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="2*" />
+                      
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Monday" HorizontalOptions="FillAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Tuesday" HorizontalOptions="FillAndExpand" />
+                    <Label Grid.Row="0" Grid.Column="2" Text="Wednesday" HorizontalOptions="FillAndExpand" />
+                    <Label Grid.Row="0" Grid.Column="3" Text="Thursday" HorizontalOptions="FillAndExpand" />
+                    <Label Grid.Row="0" Grid.Column="4" Text="Friday" HorizontalOptions="FillAndExpand" />
+
+                    <Switch Grid.Row="1" Grid.Column="0" IsToggled="{Binding isMon}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" />
+                    <Switch Grid.Row="1" Grid.Column="1" IsToggled="{Binding isTue}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" />
+                    <Switch Grid.Row="1" Grid.Column="2" IsToggled="{Binding isWed}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" />
+                    <Switch Grid.Row="1" Grid.Column="3" IsToggled="{Binding isThu}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" />
+                    <Switch Grid.Row="1" Grid.Column="4" IsToggled="{Binding isFri}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" />
+                </Grid>
+            </StackLayout>
+            
+            <ListView x:Name="timetableListView" ItemsSource="{Binding timetables}"  Style="{StaticResource TimetableListStyle}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="6">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding dayOfWeek}" TextColor="DimGray" BackgroundColor="LightYellow"/>
+                                        <Label Text="{Binding classTime}" TextColor="DimGray" BackgroundColor="LightYellow"/>
+                                        <Label Text="{Binding classRoom}" TextColor="DimGray" BackgroundColor="LightYellow"/>
+                                        <Label IsVisible="False" Text="{Binding lecturerId}" TextColor="DimGray"/>
+                                        <Label Text="{Binding lecturerName}" TextColor="DimGray"/>
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding subjectDesc}" TextColor="DimGray"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Start term : " TextColor="DimGray"/>
+                                        <Label Text="{Binding startTerm}" TextColor="DimGray"/>
+                                        <Label Text=", End Term : " TextColor="DimGray"/>
+                                        <Label Text="{Binding endTerm}" TextColor="DimGray"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+
+</ContentPage>

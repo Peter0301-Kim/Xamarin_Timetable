@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoomNaviMobile.View.MainView"
+             Title="Room Navigation Timetable"
+             BackgroundColor="#BE1428">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10" >
+            <!--<Image Source="mainicon.jpg" /> -->
+            <Label Text="Room Navigation Timetable" FontSize="Large" FontAttributes="Bold" TextColor="White" VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Grid ColumnSpacing="4" RowSpacing="4" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="20,5,20,5"  Source="tafesa_logo.png" Aspect="Fill"  VerticalOptions="Center" HorizontalOptions="Center"/>
+            <ImageButton Grid.Row="0" Grid.Column="4" Margin="4"  Source="login.jpg"  Aspect="Fill" Command="{Binding LoginCommand}" />
+        </Grid>
+
+        <Grid ColumnSpacing="4" RowSpacing="4" Padding="20" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="50*" />                
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton   Grid.Row="0" Grid.Column="1" Margin="2" Source="subject.jpg" Aspect="Fill" Command="{Binding SubjectCommand}" />
+            <Label Grid.Row="1" Grid.Column="1" Text="Subject" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <ImageButton   Grid.Row="0" Grid.Column="2" Margin="2" Source="timetable.jpg" Aspect="Fill" Command="{Binding TimetableCommand}" />
+            <Label Grid.Row="1" Grid.Column="2" Text="Timetable" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <ImageButton   Grid.Row="0" Grid.Column="3" Margin="2" Source="lecturer.jpg" Aspect="Fill" Command="{Binding LecturerTimetableCommand}" />
+            <Label Grid.Row="1" Grid.Column="3" Text="Lecturer" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <ImageButton  Grid.Row="2" Grid.Column="1" Margin="2" Source="course.jpg" Aspect="Fill"  Command="{Binding CourseCommand}"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="Course" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <ImageButton  Grid.Row="2" Grid.Column="2" Margin="2" Source="location.jpg" Aspect="Fill"  Command="{Binding LocationCommand}" />
+            <Label Grid.Row="3" Grid.Column="2" Text="Location" VerticalOptions="Center" HorizontalOptions="Center"/>
+            
+        </Grid>
+
+        <Grid ColumnSpacing="4" RowSpacing="4" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <ImageButton Grid.Row="0" Grid.Column="4" Margin="4"  Source="logout.jpg"  Aspect="Fill" Command="{Binding LogoutCommand}" />
+        </Grid>        
+<!--
+        <Button x:Name="btnLogIn" Text ="Log In"  Clicked="OnLoginClicked"/>
+        <Button x:Name="btnSubject" Text ="View Subject" Clicked="OnSubjectClicked"/>
+        <Button x:Name="btnTimeTable" Text ="View TimeTable" Clicked="OnTimeTableClicked"/>
+-->
+    </StackLayout>
+
+</ContentPage>

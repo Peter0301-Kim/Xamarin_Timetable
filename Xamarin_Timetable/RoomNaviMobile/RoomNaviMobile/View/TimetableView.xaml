@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoomNaviMobile.View.TimetableView" 
+             xmlns:behaviors="clr-namespace:RoomNaviMobile.Behaviors"
+             Title="Timetable">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="TimetableListStyle" 
+               TargetType="{x:Type ListView}">
+                <Setter Property="RowHeight"
+                        Value="80" />
+                <Setter Property="VerticalOptions"
+                        Value="Center" />
+                <Setter Property="Margin"
+                        Value="0" />
+                <Setter Property="BackgroundColor"
+                        Value="AliceBlue" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Campus" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Editor x:Name="txtCampus" Text="{Binding campus}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Class Room" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Editor x:Name="txtClassRoom" Text="{Binding classroom}" HorizontalOptions="FillAndExpand"/>
+                <ImageButton  x:Name="btnBarcode"  Source="img_qr.png" WidthRequest="40" HeightRequest="40" Aspect="Fill" Clicked="OnBarcodeClicked"  />
+
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Day Of Week" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Picker x:Name="picker" Title="Select a Day of week" ItemsSource="{Binding dayofweek}" HorizontalOptions="FillAndExpand"
+                        SelectedItem="{Binding selectedDayOfWeek}">
+                </Picker>
+                <Button x:Name="btnGetTimetable" Text ="Time Table" Command="{Binding GetTimetableCommand}"/>
+            </StackLayout>
+
+            <ListView x:Name="timetableListView" ItemsSource="{Binding timetables}"  Style="{StaticResource TimetableListStyle}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="6">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding classTime}" TextColor="DimGray" BackgroundColor="LightYellow"/>
+                                        <Label Text="{Binding lecturerId}" TextColor="DimGray"/>
+                                        <Label Text="{Binding lecturerName}" TextColor="DimGray"/>
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding subjectDesc}" TextColor="DimGray"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Start term : " TextColor="DimGray"/>
+                                        <Label Text="{Binding startTerm}" TextColor="DimGray"/>
+                                        <Label Text=", End Term : " TextColor="DimGray"/>
+                                        <Label Text="{Binding endTerm}" TextColor="DimGray"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior                    
+                        EventName="ItemTapped"
+                        Command="{Binding ShowLecturerCommand}"
+                        EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />
+                </ListView.Behaviors>
+
+            </ListView>
+
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

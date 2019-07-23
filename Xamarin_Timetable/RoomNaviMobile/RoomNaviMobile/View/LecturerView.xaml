@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoomNaviMobile.View.LecturerView">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Lecturer ID" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Editor Text="{Binding lecturerId}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Label Text="{Binding givenName}" HorizontalOptions="FillAndExpand"/>
+                
+                <Label Text="{Binding lastName}" HorizontalOptions="FillAndExpand"/>                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Email" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Label Text="{Binding emailAddress}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button x:Name="btnClose" Text ="Close" Command="{Binding CloseCommand}"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

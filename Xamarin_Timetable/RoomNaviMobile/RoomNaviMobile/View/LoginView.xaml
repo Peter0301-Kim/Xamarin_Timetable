@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoomNaviMobile.View.LoginView"
+             Title="Log in">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="UserId" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Entry x:Name="txtUserId" Text="{Binding userId}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Password" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+                <Entry x:Name="txtPassword" Text="{Binding password}" IsPassword="True"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <Button x:Name="btnLogIn" Text ="Log In" Command="{Binding LogInCommand}"/>
+            <Button x:Name="btnCancel" Text ="Cancel" Command="{Binding CancelCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
