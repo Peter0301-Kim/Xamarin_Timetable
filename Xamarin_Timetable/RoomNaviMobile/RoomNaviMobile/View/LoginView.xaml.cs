@@ -17,7 +17,6 @@ namespace RoomNaviMobile.View
 		public LoginView(LoginViewModel viewmodel)
 		{
 			InitializeComponent ();
-
             viewmodel.Navigation = Navigation;
             BindingContext = viewmodel;
         }
