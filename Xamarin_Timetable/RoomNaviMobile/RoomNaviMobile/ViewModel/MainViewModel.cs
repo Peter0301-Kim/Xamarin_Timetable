@@ -36,7 +36,6 @@ namespace RoomNaviMobile.ViewModel
         {
             var viewModel = DependencyInjector.Resolve<LoginViewModel>();
             await Navigation.PushAsync(new LoginView(viewModel));
-
         }
 
         public ICommand LogoutCommand => new Command( () =>  OnLogoutCommand());
@@ -56,7 +55,6 @@ namespace RoomNaviMobile.ViewModel
             else
             {
                 var viewModel = DependencyInjector.Resolve<SubjectViewModel>();
-
                 await Navigation.PushAsync(new SubjectView(viewModel));
             }
 
