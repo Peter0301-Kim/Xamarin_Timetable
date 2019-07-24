@@ -7,7 +7,7 @@
 
 
 [Xamarin Mobile App - MVVM](https://drive.google.com/file/d/1-tLblcpiJf1PWNkfalxYJoer_zlcRs9x/view?usp=sharing)
-[Xamarin Mobile App - Dependency Injection](https://drive.google.com/file/d/1mdHM5MFve_mX_WOp0_Ke0RN1mDwg5LRt/view?usp=sharing)
+[Xamarin Mobile App - Dependency Injection](https://drive.google.com/file/d/1xS0RzpZvV1BlIaGRnqKbpd_CGkDfeTUy/view?usp=sharing)
 
 ![Page Views](https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/Images.PNG)
 
