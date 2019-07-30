@@ -13,4 +13,8 @@
 ![Page Views](https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/Images.PNG)
 
 
-
+- Deployment
+   [Mobile App-Android(Click here to Download apk file)](https://drive.google.com/file/d/1iCLCUuUR4Sc3lXLMNKxyk8b8iFvyc6A0/view?usp=sharing)
+   - Before download, please check your android phone.
+     Settings -> Apps&notifications -> Advanced -> Special app access -> Install unknown apps.
+     Select Google drive and check allowed.
