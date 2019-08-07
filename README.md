@@ -18,3 +18,4 @@
    - Before download, please check your android phone.
      Settings -> Apps&notifications -> Advanced -> Special app access -> Install unknown apps.
      Select Google drive and check allowed.
+   - Identity : Peter/Peter@1 (Valid until 30-Aug-2019)
