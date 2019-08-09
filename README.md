@@ -12,6 +12,7 @@
 
 ![Page Views](https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/Images.PNG)
 
+[Barcode Sample](https://drive.google.com/file/d/1Te0un2xwskHjLH0H1yRDv6YYFLBNWr0l/view?usp=sharing)
 
 - Deployment
 
