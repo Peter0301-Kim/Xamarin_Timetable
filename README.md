@@ -15,10 +15,8 @@
 
 - Deployment
 
-   [Mobile App-Android](<a href='https://play.google.com/store/apps/details?id=com.tafesa&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/google-play-badge.png'/></a>)
+   [Mobile App-Android]
+   
+<a href='https://play.google.com/store/apps/details?id=com.tafesa&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/google-play-badge.png'/></a>
 
-   [Mobile App-Android(Click here to Download apk file)](https://drive.google.com/file/d/1iCLCUuUR4Sc3lXLMNKxyk8b8iFvyc6A0/view?usp=sharing)
-   - Before download, please check your android phone.
-     Settings -> Apps&notifications -> Advanced -> Special app access -> Install unknown apps.
-     Select Google drive and check allowed.
    - Identity : Peter/Peter@1 (Valid until 30-Aug-2019)
