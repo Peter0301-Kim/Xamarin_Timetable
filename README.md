@@ -15,7 +15,7 @@
 
 - Deployment
 
-   [Mobile App-Android(Click here to Download apk file)](<a href='https://play.google.com/store/apps/details?id=com.tafesa&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>)
+   [Mobile App-Android](<a href='https://play.google.com/store/apps/details?id=com.tafesa&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='google-play-badge'/></a>)
 
    [Mobile App-Android(Click here to Download apk file)](https://drive.google.com/file/d/1iCLCUuUR4Sc3lXLMNKxyk8b8iFvyc6A0/view?usp=sharing)
    - Before download, please check your android phone.
