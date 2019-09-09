@@ -20,4 +20,4 @@
    
 <a href='https://play.google.com/store/apps/details?id=com.tafesa&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://github.com/Peter0301-Kim/Xamarin_Timetable/blob/master/google-play-badge.png'/></a>
 
-   - Identity : Peter/Peter@1 (Valid until 30-Aug-2019)
+   - Identity : Peter/Peter@1 (Valid until 30-Sep-2019)
